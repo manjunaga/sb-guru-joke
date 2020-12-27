@@ -5,13 +5,18 @@ import org.springframework.stereotype.Service;
 import guru.springframework.norris.chuck.ChuckNorrisQuotes;
 
 @Service
-public class JokeServiceImpl implements JokeService{
+public class JokeServiceImpl implements JokeService {
 
 	private final ChuckNorrisQuotes chuckNorrisQuotes;
-	
-	public JokeServiceImpl() {
+
+//	public JokeServiceImpl() {
+//		super();
+//		chuckNorrisQuotes = new ChuckNorrisQuotes();
+//	}
+
+	public JokeServiceImpl(ChuckNorrisQuotes chuckNorrisQuotes) {
 		super();
-		chuckNorrisQuotes = new ChuckNorrisQuotes();
+		this.chuckNorrisQuotes = chuckNorrisQuotes;
 	}
 
 	@Override
